@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -5,10 +6,14 @@ const Navbar = () => {
     <nav>
       <ul>
         <li>
-          <a href="">menu</a>
+          <Link href={"/"}>
+            <a>home</a>
+          </Link>
         </li>
         <li>
-          <a href="">work</a>
+          <Link href={"/work"}>
+            <a>work</a>
+          </Link>
         </li>
         <li>
           <a href="">resume</a>
