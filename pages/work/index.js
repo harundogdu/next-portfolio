@@ -18,7 +18,7 @@ const Work = ({data}) => {
 export default Work;
 
 export async function getStaticProps(context) { 
-  const response = await fetch(`http://localhost:3000/api/project`);
+  const response = await fetch(`${process.env.NODE_ENV}/api/project`);
   const data = await response.json();
 
   if (!data) {

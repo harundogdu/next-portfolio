@@ -19,7 +19,7 @@ const ProjectDetails = ({ data }) => {
 
 export async function getServerSideProps({ params }) {
   const response = await fetch(
-    `http://localhost:3000/api/project/${params.slug}`
+    `${process.env.NODE_ENV}/api/project/${params.slug}`
   );
   const data = await response.json();
 
