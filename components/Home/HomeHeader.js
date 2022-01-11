@@ -27,6 +27,14 @@ const HomeHeader = () => {
       id: 6,
       title: "php",
     },
+    {
+      id: 7,
+      title: "mysql",
+    },
+    {
+      id: 8,
+      title: "nosql",
+    },
   ]);
   return (
     <>
@@ -34,10 +42,7 @@ const HomeHeader = () => {
         Full-stack web and Mobile apps developer.
       </h1>
       <p className="pr-48 py-4">
-        I'm a full-stack web & mobile apps developer with over 7 years of
-        working experience. Currently working on a bunch of productivity-rated
-        apps that are used by thousands of professionals worldwide. Also, I
-        share coding tutorial videos on my YouTube channel.
+      I'm a full-stack web & mobile apps developer with over 5 years of working experience. Currently working on a bunch of productivity-rated apps that are used by thousands of professionals worldwide. A good; speaker, reader, listener and friend. He likes to learn new technologies and teach what he learns. You can contact at any time.
       </p>
       <div className="flex gap-x-4">
         {data.map((item) => (

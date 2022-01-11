@@ -25,17 +25,24 @@ const ServicesList = () => {
   ]);
   return (
     <div className="flex py-4 flex-wrap items-center justify-end">
-      <p className="w-[600px] mr-auto">
-        7 Şubat 1998'de Ankara'nın Altındağ ilçesinde doğdum. İlköğretim
-        dönemimi burada tamamlamamın ardından İMKB Mesleki ve Teknik Anadolu
-        lisesini kazanarak lise hayatıma başladım. Lisede bulunduğum sayısal
-        bölümünde derslerin yanısıra başlangıç seviyesi C# ve Sql programlama
-        öğrenmeye başladım. Lise dönemi ardından Karadeniz Teknik Üniversitesi
-        Yazılım Mühendisliği bölümünü kazandım ve halen eğitim hayatıma burada
-        devam ediyorum. Özel olarak web ve grafik tasarımı, mobil uygulama
-        geliştirme ile ilgileniyorum. İlgili konular üzerine freelancer olarak
-        hizmet veriyorum.
-      </p>
+      <div className="w-[600px] mr-auto space-y-8">
+        <p>
+          February 7, 1998 I am from Altındağ district of Ankara. After
+          completing my primary education here, he continues to high school by
+          winning IMKB Vocational and Technical High School.
+        </p>
+        <p>
+          My high school education continues to learn to teach beginner level
+          html, css and javascript to complete courses.
+        </p>
+        <p>
+          I specifically design with web and graphic design, mobile application
+          development. Freelance services on related subjects. After high
+          school, he prepares the Department of Software Engineering at
+          Karadeniz Technical University and continues the ongoing education
+          season.
+        </p>
+      </div>
       <div className="flex-1 flex flex-wrap justify-center h-96">
         {services.map((service) => (
           <Service key={service.id} service={service} />

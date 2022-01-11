@@ -1,23 +1,30 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { GiHamburgerMenu } from "react-icons/gi";
+import MiniDescription from "./MiniDescription";
 const Header = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const handleMenuClick = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <header className="flex items-center justify-between">
+    <header className="flex items-start justify-between border-b border-gray-300 pb-5 sticky top-0 z-20 bg-white py-2 ">
       <div>
         <h1 className="font-bold text-xl">HarunDoğdu</h1>
-        <p className="w-96 my-2 font-thin">
-          Apps developer. Loves good and intuitive UX. Makes fun things to watch
-          on YouTube.
-        </p>
-        <a href="mailto:info@harundogdu.com" className="text-sm font-semibold">
+        <MiniDescription />
+        <a href="mailto:info@harundogdu.com" className="text-sm font-semibold hover:text-primary">
           info@harundogdu.com
         </a>
       </div>
       <div className="flex justify-between gap-x-5">
-        <a href="">subscribe</a>
-        <Navbar />
-        <GiHamburgerMenu />
+        <Navbar isOpen={isOpen} />
+        <GiHamburgerMenu
+          size={24}
+          onClick={handleMenuClick}
+          className={`${
+            isOpen ? "rotate-90 text-primary" : ""
+          }  cursor-pointer duration-300 transition select-none`}
+        />
       </div>
     </header>
   );

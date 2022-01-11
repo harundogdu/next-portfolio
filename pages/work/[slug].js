@@ -9,7 +9,7 @@ const ProjectDetails = ({ data }) => {
       <Head>
         <title>Project Details - HarunDoğdu</title>
       </Head>
-      <div>
+      <div className="">
         <h1>{data.title}</h1>
         <p>{data.description}</p>
       </div>

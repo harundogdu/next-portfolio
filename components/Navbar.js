@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({isOpen}) => {
   return (
-    <nav>
+    <nav className={`${isOpen ? "block" : "invisible"}`}>
       <ul>
         <li>
           <Link href={"/"}>
@@ -16,15 +16,14 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <a href="">resume</a>
+          <Link href={"/about"}>
+            <a>about me</a>
+          </Link>
         </li>
         <li>
-          <a href="" className="text-primary">
-            contact me
-          </a>
-        </li>
-        <li>
-          <a href="">more</a>
+          <Link href={"/contact"}>
+            <a className="text-primary font-semibold">contact me</a>
+          </Link>
         </li>
       </ul>
     </nav>
