@@ -5,7 +5,7 @@ import { BASE_URL } from "enviroments";
 import Head from "next/head";
 import React from "react";
 
-const Work = ({data}) => {
+const Work = ({ data }) => {
   return (
     <Layout>
       <Head>
@@ -18,7 +18,7 @@ const Work = ({data}) => {
 
 export default Work;
 
-/* export async function getStaticProps(context) { 
+export async function getStaticProps(context) {
   const response = await fetch(`${BASE_URL}/api/project`);
   const data = await response.json();
 
@@ -29,7 +29,6 @@ export default Work;
   }
 
   return {
-    props: { data }, 
+    props: { data, fallback: true },
   };
-} */
-
+}
