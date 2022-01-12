@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useMainContext } from "context/mainContext";
-import React, { useState } from "react";
+import React from "react";
+import MamiImage from "public/screenshots/mami.jpg";
 
 const HomeHeader = () => {
   const { techs } = useMainContext();
-  //
-  https: return (
+  return (
     <>
       <h1 className="text-6xl font-extrabold">
         Full-stack web and Mobile apps developer.
@@ -29,11 +29,7 @@ const HomeHeader = () => {
           </div>
         </div>
         <div className="">
-          <img
-            src="https://i.ibb.co/3M5xWYR/d447ee50-4c07-49d4-8f37-35dc530fbbf4.jpg"
-            className="w-full"
-            alt="Mami"
-          />
+          <img src={MamiImage.src} className="w-full" alt="Mami" />
         </div>
       </div>
     </>
