@@ -25,7 +25,7 @@ export async function getServerSideProps({ params }) {
   return {
     props: {
       data,
-      fallback: true,
+      fallback: false,
     },
   };
 }

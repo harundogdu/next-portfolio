@@ -29,6 +29,6 @@ export async function getStaticProps(context) {
   }
 
   return {
-    props: { data, fallback: true },
+    props: { data, fallback: false },
   };
 }
