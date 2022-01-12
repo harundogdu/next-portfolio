@@ -1,4 +1,5 @@
 import Layout from "components/Layout";
+import { BASE_URL } from "enviroments";
 import Head from "next/head";
 import React from "react";
 import { StringToSlug } from "utils/helper";
@@ -17,9 +18,9 @@ const ProjectDetails = ({ data }) => {
   );
 };
 
-export async function getServerSideProps({ params }) {
+/* export async function getServerSideProps({ params }) {
   const response = await fetch(
-    `${process.env.NODE_ENV}/api/project/${params.slug}`
+    `${BASE_URL}/api/project/${params.slug}`
   );
   const data = await response.json();
 
@@ -28,7 +29,7 @@ export async function getServerSideProps({ params }) {
       data,
     },
   };
-}
+} */
 
 /* export async function getServerPaths() {
   const response = await fetch(`http://localhost:3000/api/project`);

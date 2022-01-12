@@ -1,28 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useMainContext } from "context/mainContext";
 import React, { useState } from "react";
 import Service from "./Service";
 
 const ServicesList = () => {
-  const [services, setServices] = useState([
-    {
-      id: 1,
-      title: "Frontend Development",
-      description:
-        "With Laravel 8.* ,The construction of an advanced personal website website application that I have developed.",
-    },
-    {
-      id: 2,
-      title: "Backend Development",
-      description:
-        "With Laravel 8.* ,The construction of an advanced quiz website application that I have developed.",
-    },
-    {
-      id: 3,
-      title: "Mobile App Development",
-      description:
-        "Using React.js and Tailwindcss the repo where I developed the 'brandcolors.net' page.",
-    },
-  ]);
+  const { services } = useMainContext();
   return (
     <div className="flex py-4 flex-wrap items-center justify-end">
       <div className="w-[600px] mr-auto space-y-8">

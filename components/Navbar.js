@@ -10,11 +10,11 @@ const Navbar = ({isOpen}) => {
             <a>home</a>
           </Link>
         </li>
-        <li>
+       {/*  <li>
           <Link href={"/work"}>
             <a>work</a>
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link href={"/about"}>
             <a>about me</a>

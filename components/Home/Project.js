@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { StringToSlug } from "utils/helper";
-import ProjectImage from "../../public/projects.png";
+import ProjectImage from "public/projects.png";
 const Project = ({ project }) => {
   return (
     <Link href={`/work/${StringToSlug(project.title)}`}>
