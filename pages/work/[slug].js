@@ -2,20 +2,43 @@ import Layout from "components/Layout";
 import { BASE_URL } from "enviroments";
 import Head from "next/head";
 import React from "react";
-import { StringToSlug } from "utils/helper";
+import ImageGallery from "react-image-gallery";
+import { FiExternalLink } from "react-icons/fi";
 
 const ProjectDetails = ({ data }) => {
-  if (data === undefined) {
-    return <div>Loading...</div>;
-  }
   return (
     <Layout>
       <Head>
         <title>Project Details - HarunDoğdu</title>
       </Head>
-      <div className="">
-        <h1>{data.title}</h1>
-        <p>{data.description}</p>
+      <div className="space-y-7">
+        <div>
+          <h1 className="text-4xl font-bold">Project Details</h1>
+        </div>
+        <div className="space-y-4">
+          <h2 className="text-2xl font-semibold">
+            Project Title : {data.title}
+          </h2>
+          <p className="text-lg">
+            <span className="text-xl font-semibold">Project Description :</span>
+            <br />
+            {data.description}
+          </p>
+
+          <p className="text-lg w-full flex gap-x-2 items-center">
+            Project Repository in
+            <a
+              href={data.repo}
+              className="text-primary font-bold flex gap-x-2 items-center justify-center"
+            >
+              <FiExternalLink />
+            </a>
+          </p>
+        </div>
+        <div className="space-y-4">
+          <h2 className="text-2xl font-semibold">Project Images</h2>
+          <ImageGallery items={data.images} />
+        </div>
       </div>
     </Layout>
   );

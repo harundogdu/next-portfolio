@@ -8,7 +8,7 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="flex items-start justify-between border-b border-gray-300 pb-5 sticky top-0 z-20 bg-white py-2 ">
+    <header className="flex items-start justify-between border-b border-gray-300 pb-5 ">
       <div>
         <h1 className="font-bold text-xl">HarunDoğdu</h1>
         <MiniDescription />

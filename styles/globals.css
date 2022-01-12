@@ -1,5 +1,5 @@
 @import url('http://fonts.cdnfonts.com/css/mina');
-
+@import "~react-image-gallery/styles/css/image-gallery.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
