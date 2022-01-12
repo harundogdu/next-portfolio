@@ -6,6 +6,9 @@ import Head from "next/head";
 import React from "react";
 
 const Work = ({ data }) => {
+  if (data === undefined) {
+    return <div>Loading...</div>;
+  }
   return (
     <Layout>
       <Head>

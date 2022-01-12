@@ -5,6 +5,9 @@ import React from "react";
 import { StringToSlug } from "utils/helper";
 
 const ProjectDetails = ({ data }) => {
+  if (data === undefined) {
+    return <div>Loading...</div>;
+  }
   return (
     <Layout>
       <Head>
